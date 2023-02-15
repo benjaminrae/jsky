@@ -3,12 +3,12 @@ const packageManagers = ["npm", "yarn", "pnpm"];
 
 export const typescriptQuestion = {
   type: "confirm",
-  name: "typescript",
+  name: "hasTypescript",
   message: "Does your project use TS?",
   default: true,
 };
 
-export const hookQuestions = {
+export const hooksQuestion = {
   type: "checkbox",
   name: "hooks",
   message: "Which hooks do you want to add to your project?",
@@ -17,14 +17,14 @@ export const hookQuestions = {
 
 export const jsxQuestion = {
   type: "confirm",
-  name: "jsx",
+  name: "hasJsx",
   message: "Does your project use JSX?",
   default: true,
 };
 
 export const packageManagerQuestion = {
   type: "list",
-  name: "package",
+  name: "packageManager",
   message: "Which package manager are you using?",
   choices: packageManagers,
   default: "npm",
@@ -33,7 +33,7 @@ export const packageManagerQuestion = {
 const questions = [
   typescriptQuestion,
   jsxQuestion,
-  hookQuestions,
+  hooksQuestion,
   packageManagerQuestion,
 ];
 
